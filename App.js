@@ -1,20 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, StyleSheet, View,} from 'react-native';
+
+import GoalContainer from './components/GoalApps/GoalContainer';
+import StartGameScreen from './screens/StartGameScreen';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+  return ( 
+    <View style={styles.rootScreen} >
+    <ImageBackground source={require('./assets/images/background.png')} resizeMode='cover' style={styles.rootScreen} imageStyle={styles.backgroundImage}>
+      <StartGameScreen></StartGameScreen>
+      </ImageBackground>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  rootScreen: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    backgroundColor: '#ddb52f'
   },
+  backgroundImage: {
+    opacity: 0.35,
+  }
+  
 });
