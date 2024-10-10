@@ -2,7 +2,7 @@ import { View, TextInput, StyleSheet, Alert } from "react-native";
 import PrimaryButton from "../components/MiniGame/PrimaryButton";
 import React, { useState } from 'react';
 
-function StartGameScreen() {
+function StartGameScreen({onPickNumber}) {
   const [enteredNumber, setEnteredNumber] = useState('');
 
   function numberInputHandler(enteredText) {
@@ -23,11 +23,12 @@ function StartGameScreen() {
       );
       return;
     }
-    console.log("Valid number!");
+    onPickNumber(chosenNumber)
   }
 
   return (
-    <View style={styles.inputContainer}>
+   <View style={styles.rootContainer}>
+       <View style={styles.inputContainer}>
       <TextInput
         style={styles.numberInput}
         maxLength={2}
@@ -41,12 +42,18 @@ function StartGameScreen() {
         <PrimaryButton onPress={confirmInputHandler}>Confirm</PrimaryButton>
       </View>
     </View>
+   </View>
   );
 }
 
 export default StartGameScreen;
 
 const styles = StyleSheet.create({
+   rootContainer:{
+      flex: 1,
+      marginTop: 100,
+      alignItems: 'center'
+   },
   inputContainer: {
     justifyContent: 'center',
     padding: 16,
