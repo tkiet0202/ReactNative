@@ -1,47 +1,28 @@
-Mobile apps are one of the best ways to engage with users - no wonder everyone wants to build one!
+### GoalApp
+- GoaGoalContainer: Manages goal input, list, adding, and deleting goals using useState.
 
-But wouldn't it be amazing if you could use your web development knowledge, combined with your React knowledge, to build mobile apps with that?
+- GoalInput: Handles goal input and button for adding goals.
 
-That's exactly what React Native allows you to do!
+- GoalItem: Displays each goal, with delete functionality on press.
 
-No need to learn Java, Android, Swift, ObjectiveC or anything of that - React and JavaScript is all you need to create awesome native mobile apps that work on both Android and iOS. That's probably the reason why Instagram, AirBnB, Skype and many other global companies are using it to build their mobile apps!
+- FlatList: Renders the goal list efficiently using keyExtractor.
 
-With this course, you can join this league. I'll teach you all you need to create your own React Native apps, publish them to the Google Play Store and Apple App Store and dive really deep into the React Native ecosystem.
+- Styling: Applies consistent design to components with StyleSheet.lContainer: Manages goal input, list, adding, and deleting goals using useState.
 
-You'll learn all about the theory behind React Native, its core concepts, how to build responsive designs that work on different device sizes, how to navigate around, use maps and the camera and so much more!
+### Mini Game
 
-And which better way to learn than by building a real app? We'll build the "Favorite Places" app in this course, an app where users can share amazing pictures and the location where they took them. This app will allow you to see things like using maps, the camera, user authentication, connecting to a server and much more in action.
+- Game Flow: You use useState to manage the game state, including the user's selected number (userNumber), the game-over status (gameIsOver), 
+and the number of guess rounds (guessRounds).
 
-By the end of the course, we'll of course also go through all steps required to get it into an app store.
+- Functions like pickedNumberHandler start the game, gameOverHandler handles the game-over event, and startNewGameHandler resets the game for a new round.
+Screens: Based on the game state, different screens (StartGameScreen, GameScreen, GameOverScreen) are shown. You switch between them dynamically depending 
+on whether the user has picked a number or the game is over.
 
-Here's a detailed look at what you'll get:
+## UI Components:
 
-The core concepts and theory
+- PrimaryButton: Custom button component that handles press actions using Pressable.
+- NumberContainer: Displays the chosen number with stylized borders and text.
+- Title: Styled text for displaying headings, like titles.
+- Styling: You’ve applied StyleSheet for component layout and design, using properties like flex, padding, and color constants imported from colors.js.
+- Image Background: You use ImageBackground to add a background image to the game interface, with adjustable opacity for styling.
 
-How to use React, JavaScript and native components
-
-Understand how to navigate in React Native apps
-
-A closer look at styling and animating React Native apps
-
-Instructions on how to use third-party libraries in your React Native app
-
-Detailed examples on how to use maps or an image picker
-
-A full user authentication flow
-
-How to connect to a backend server from your app
-
-Debugging instructions
-
-And so much more!
-
-What will you need to succeed in this course?
-
-NO Android, Java, Swift or ObjectiveC knowledge is required!
-
-JavaScript and React (for the web) knowledge is required though - you don't need to be an expert but the basics need to be set (though there are refresher sections in this course!)
-
-I'd be very happy to welcome you in the course!
-
-Max
